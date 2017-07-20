@@ -2,7 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/image/image"
+    "pages/tpl/tpl"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -10,15 +10,5 @@
     "navigationBarTitleText": "这里是导航栏",
     "navigationBarTextStyle":"black"
   },
-  "debug": true,
-  "tabBar": {
-    "color": "#ccc",
-    "selectedColor": "##1AAD16",
-    "backgroundColor":"#fff",
-    "position": "bottom",
-    "list": [
-      { "pagePath":"pages/index/index", "text":"首页" },
-      { "pagePath":"pages/logs/logs", "text":"日志页" }
-    ]
-  }
+  "debug": true
 }

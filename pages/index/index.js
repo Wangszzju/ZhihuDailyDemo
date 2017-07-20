@@ -1,23 +1,28 @@
 //index.js
 //获取应用实例
 var app = getApp()
+let { formatDate } = require('../../utils/util')
 Page({
   data: {
-    userInfo: {}
+    storiesList: []
   },
   //事件处理函数：点击修改url，跳转页面
   bindViewTap: function() {
 
   },
   onLoad: function () {
-    console.info('加载完成了你这个逗比赶紧去拿数据')
     var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
+    // 页面加载后获取知乎数据
+    wx.request({
+      url: 'http://news.at.zhihu.com/api/4/news/before/' + formatDate(new Date(),''),
+      success: res => {
+        this.setData({
+          storiesList: res.data && res.data.stories
+        });
+      },
+      fail: err => {
+        throw(new Error(err));
+      }
     })
   },
   onReady(){

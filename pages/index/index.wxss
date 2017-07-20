@@ -1,22 +1,43 @@
 /**index.wxss**/
-.userinfo {
+.container{
+  padding: 50rpx 0;
+  background-color: #ccc;
+}
+.story-list{
+  margin: 0 40rpx;
+  display: -webkit-flex; /* Wechat */
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /*  上下用边距解决 */
+}
+.story-list__item{
+  margin: 20rpx 0;
+  vertical-align: baseline;
+  display: -webkit-flex; /* Wechat */
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  border: 1px solid #fff;
+  background-color: #fff;
 }
+.story-text-box{
+  padding: 0 25rpx;
+  max-width: 400rpx;
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.story-list__item-text{
+  font-size: 14px;
+  line-height: 1.14;
 }
-
-.usermotto {
-  margin-top: 200px;
-  color:#f00;
+ .story-list__item-img{
+  width: 130rpx;
+  height: 130rpx;
+  padding: 15rpx;
 }
+/* .story-list__item-img{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 15rpx;
+  background-size: cover;
+} */
